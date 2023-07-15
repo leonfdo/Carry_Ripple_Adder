@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/leonf/Music/FPGA/Lab_1/full_adder.sv
+source_file = 1, C:/Users/leonf/Music/FPGA/Lab_1/db/DE1_SoC.cbx.xml
+design_name = full_adder
+instance = comp, \sum~output , sum~output, full_adder, 1
+instance = comp, \cout~output , cout~output, full_adder, 1
+instance = comp, \cin~input , cin~input, full_adder, 1
+instance = comp, \b~input , b~input, full_adder, 1
+instance = comp, \a~input , a~input, full_adder, 1
+instance = comp, \sum~0 , sum~0, full_adder, 1
+instance = comp, \cout~0 , cout~0, full_adder, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

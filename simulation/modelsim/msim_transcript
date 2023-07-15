@@ -1,0 +1,50 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do DE1_SoC_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/leonf/Music/FPGA/Lab_1 {C:/Users/leonf/Music/FPGA/Lab_1/full_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 03:40:02 on Jul 15,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leonf/Music/FPGA/Lab_1" C:/Users/leonf/Music/FPGA/Lab_1/full_adder.sv 
+# -- Compiling module full_adder
+# -- Compiling module n_bit_adder
+# -- Compiling module n_adder_test
+# 
+# Top level modules:
+# 	n_adder_test
+# End time: 03:40:02 on Jul 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.n_adder_test
+# vsim work.n_adder_test 
+# Start time: 03:40:11 on Jul 15,2023
+# Loading sv_std.std
+# Loading work.n_adder_test
+# Loading work.n_bit_adder
+# Loading work.full_adder
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'a'. The port definition is at: C:/Users/leonf/Music/FPGA/Lab_1/full_adder.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /n_adder_test/dut File: C:/Users/leonf/Music/FPGA/Lab_1/full_adder.sv Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'b'. The port definition is at: C:/Users/leonf/Music/FPGA/Lab_1/full_adder.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /n_adder_test/dut File: C:/Users/leonf/Music/FPGA/Lab_1/full_adder.sv Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'sum'. The port definition is at: C:/Users/leonf/Music/FPGA/Lab_1/full_adder.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /n_adder_test/dut File: C:/Users/leonf/Music/FPGA/Lab_1/full_adder.sv Line: 38
+add wave -position end  sim:/n_adder_test/a
+add wave -position end  sim:/n_adder_test/b
+add wave -position end  sim:/n_adder_test/sum
+add wave -position end  sim:/n_adder_test/cin
+add wave -position end  sim:/n_adder_test/cout
+# Load canceled
+run
+run
+run
+# End time: 03:42:07 on Jul 15,2023, Elapsed time: 0:01:56
+# Errors: 0, Warnings: 3
